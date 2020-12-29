@@ -1,6 +1,8 @@
+const Asteroid = require("./asteroid.js");
 const MovingObject = require("./moving_object.js");
 window.MovingObject = MovingObject;
 
+window.Asteroid = Asteroid;
 window.addEventListener('DOMContentLoaded', function(){
     const canvasEl = document.getElementById('game-canvas');
     canvasEl.width = 500;
@@ -15,9 +17,10 @@ window.addEventListener('DOMContentLoaded', function(){
         color: "#00FF00"
     });
 
+    const ast = new Asteroid({ pos: [340, 30] });
+    ast.draw(ctx);
+
     mo.draw(ctx);
-
-
     // test
     mo.move();
     mo.draw(ctx);
