@@ -10,10 +10,15 @@ window.addEventListener('DOMContentLoaded', function(){
     // test
     const mo = new MovingObject({
         pos: [30, 30],
-        vel: [10, 10],
+        vel: [100, 100],
         radius: 50,
         color: "#00FF00"
     });
+
     mo.draw(ctx);
+
+
     // test
+    mo.move();
+    mo.draw(ctx);
 });

@@ -49,7 +49,7 @@ eval("function MovingObject(option){\n    this.pos = option.pos; //option.pos ==
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-eval("const MovingObject = __webpack_require__(/*! ./moving_object.js */ \"./src/moving_object.js\");\nwindow.MovingObject = MovingObject;\n\nwindow.addEventListener('DOMContentLoaded', function(){\n    const canvasEl = document.getElementById('game-canvas');\n    canvasEl.width = 500;\n    canvasEl.height = 500\n    const ctx = canvasEl.getContext('2d');\n    window.ctx = ctx;\n    // test\n    const mo = new MovingObject({\n        pos: [30, 30],\n        vel: [10, 10],\n        radius: 50,\n        color: \"#00FF00\"\n    });\n    mo.draw(ctx);\n    // test\n});\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("const MovingObject = __webpack_require__(/*! ./moving_object.js */ \"./src/moving_object.js\");\nwindow.MovingObject = MovingObject;\n\nwindow.addEventListener('DOMContentLoaded', function(){\n    const canvasEl = document.getElementById('game-canvas');\n    canvasEl.width = 500;\n    canvasEl.height = 500\n    const ctx = canvasEl.getContext('2d');\n    window.ctx = ctx;\n    // test\n    const mo = new MovingObject({\n        pos: [30, 30],\n        vel: [100, 100],\n        radius: 50,\n        color: \"#00FF00\"\n    });\n\n    mo.draw(ctx);\n\n\n    // test\n    mo.move();\n    mo.draw(ctx);\n});\n\n//# sourceURL=webpack:///./src/index.js?");
 })();
 
 /******/ })()
